@@ -1,15 +1,54 @@
-# Elysia with Bun runtime
-
 ## Getting Started
-To get started with this template, simply paste this command into your terminal:
-```bash
-bun create elysia ./elysia-example
+
+###### Installing the dependencies
+
+To install the needed dependencies simply run:
+
+```
+bun install
 ```
 
-## Development
-To start the development server run:
-```bash
+###### Starting the database instance
+
+To start the database instance run:
+
+```
+docker compose up
+
+# or
+
+docker-compose up
+```
+
+this will start our postgresql database, so wait for it to be ready and then run the migrations.
+
+###### Running the migrations
+
+We need to run the migrations to create the database tables. Run the following command to run the migrations:
+
+```
+bun run migrate
+```
+
+###### Running the server
+
+After all the steps we should be ready to run the project, to start the server run:
+
+```
 bun run dev
 ```
 
-Open http://localhost:3000/ with your browser to see the result.
+and you should see this message in the console:
+`🦊 Elysia is running at localhost:4321`
+
+###### API Docs (Swagger)
+
+To access the API docs, go to:
+
+```
+http://localhost:4321/swagger
+```
+
+###### Essentials
+
+install `Biome` Vs Code extension for linting and code formatting

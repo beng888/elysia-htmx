@@ -4,12 +4,12 @@ import { createInsertSchema, createSelectSchema } from "drizzle-typebox";
 import { users } from "./auth";
 
 export const organizations = pgTable("organizations", {
-	id: serial("id").primaryKey(),
-	name: text("name").notNull(),
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
 });
 
 export const organizationsRelations = relations(organizations, ({ many }) => ({
-	users: many(users),
+  users: many(users),
 }));
 
 export type Organization = typeof organizations.$inferSelect;

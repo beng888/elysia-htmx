@@ -1,30 +1,30 @@
 {
-	"name": "elysia-htmx",
-	"version": "1.0.50",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "bun run --watch src/main.ts",
-		"check": "bunx @biomejs/biome check --apply <files>",
-		"db:push": "drizzle-kit push:pg",
-		"db:migrate": "drizzle-kit generate:pg --schema ./src/db/schema/* && bun run ./src/db/migrate.ts",
-		"db:studio": "drizzle-kit studio",
-		"db:seed": "bun run ./src/db/seed.ts"
-	},
-	"dependencies": {
-		"@elysiajs/html": "^0.8.0",
-		"@elysiajs/swagger": "^1.0.2",
-		"@lucia-auth/adapter-drizzle": "^1.0.5",
-		"drizzle-orm": "^0.30.2",
-		"drizzle-typebox": "^0.1.1",
-		"elysia": "latest",
-		"lucia": "^3.1.1",
-		"pg": "^8.11.3"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.6.1",
-		"@types/pg": "^8.11.2",
-		"bun-types": "latest",
-		"drizzle-kit": "^0.20.14"
-	},
-	"module": "src/index.js"
+  "name": "elysia-htmx",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/main.ts",
+    "check": "bunx @biomejs/biome check --apply <files>",
+    "db:push": "drizzle-kit push:pg",
+    "db:migrate": "drizzle-kit generate:pg --schema ./src/db/schema/* && bun run ./src/db/migrate.ts",
+    "db:studio": "drizzle-kit studio",
+    "db:seed": "bun run ./src/db/seed.ts"
+  },
+  "dependencies": {
+    "@elysiajs/html": "^0.8.0",
+    "@elysiajs/swagger": "^1.0.2",
+    "@lucia-auth/adapter-drizzle": "^1.0.5",
+    "drizzle-orm": "^0.30.2",
+    "drizzle-typebox": "^0.1.1",
+    "elysia": "latest",
+    "lucia": "^3.1.1",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.6.1",
+    "@types/pg": "^8.11.2",
+    "bun-types": "latest",
+    "drizzle-kit": "^0.20.14"
+  },
+  "module": "src/index.js"
 }
